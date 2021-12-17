@@ -1,0 +1,21 @@
+@mixin col($col,$totalCol) {
+    flex: 0 0 calc(($col / $totalCol * 100%) - $gutter-horizontal);
+    max-width: calc(($col / $totalCol * 100%) - $gutter-horizontal);
+}
+
+// Responsive theo thứ tự
+// base + typography >  general layout + grid > page layout > Components
+@mixin respond ($breakpoint) {
+    @if $breakpoint == 'big-desktop' {
+        @media (min-width: 1800px){@content}; //1800px
+    }
+    @if $breakpoint == 'tab-land' {
+        @media (max-width: 1200px){@content}; //1200px
+    }
+    @if $breakpoint == 'tab-port' {
+        @media (max-width: 900px){@content};  //900px
+    }
+    @if $breakpoint == 'phone' {
+        @media (max-width: 600px){@content}; //600px
+    }
+}

@@ -1,0 +1,75 @@
+// file typography sẽ chứa các setting về font,size của body, phần text (như heading,...)
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.7;
+    color: $color-grey;
+}
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    &--main {
+        display: block;
+        font-size: 6.2rem;
+        font-weight: 600;
+        letter-spacing: 1.5rem;
+        animation: moveInLeft 1s ease-out;
+
+        @include respond(phone) {
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.8rem;
+        animation: moveInRight 1s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+.heading-secondary {
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: $gradient-text;
+    transition: all 0.2s ease-in-out;
+    
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
+    &:hover {
+        transform: skewY(5deg) scale(1.1);
+        text-shadow: 0.5rem 1rem 2rem rgba($color-black,0.2);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    margin-bottom: 3rem;
+}

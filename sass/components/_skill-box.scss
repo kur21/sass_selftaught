@@ -1,0 +1,35 @@
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all .2s ease-in-out;
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: $gradient-text;
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}

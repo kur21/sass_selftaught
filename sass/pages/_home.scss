@@ -1,0 +1,38 @@
+.section-about,
+.section-skills,
+.section-courses {
+    margin: 8rem 0;
+    @include respond(tab-port) {
+        margin: 5rem 0;
+    }
+}
+
+.section-skills {
+    padding: 20rem 0;
+    background-image: $gradient-primary-o, url(../img/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: ellipse(70% 50% at 50% 50%);
+    @include respond(tab-land) {
+        clip-path: ellipse(80% 50% at 50% 50%);
+    }
+    @include respond(tab-port) {
+        clip-path: ellipse(120% 50% at 50% 50%);
+        padding: 10rem 0;
+    }
+    @include respond(phone) {
+        clip-path: ellipse(150% 50% at 50% 50%);
+        padding: 10rem 0;
+    }
+}
+
+.section-testimonials {
+    position: relative;
+    padding: 5rem 0;
+}
+
+.section-enroll {
+    padding: 10rem 0;
+    background-image: $gradient-primary;
+}
+

@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12px
+    }
+    @include respond(tab-land) {
+        font-size: 56.25%; //1rem = 9px
+    }
+    @include respond(tab-port) {
+        font-size: 50%; //1rem = 8px
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button{
+    outline: none;
+}
+input{
+    line-height: normal;
+}
+label,
+button{
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+body {
+    background-color: $color-grey-light;
+    overflow-x: hidden;
+}
+ul {
+    list-style-type: none;
+}
